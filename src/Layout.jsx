@@ -1,49 +1,47 @@
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 const Layout = () => {
-  const scrollRef = useRef(null); // for main scroll container
-  const locoScrollInstance = useRef(null); // to store Locomotive instance
+  //   const scrollRef = useRef(null); // for main scroll container
+  //   const locoScrollInstance = useRef(null); // to store Locomotive instance
 
-  useEffect(() => {
-    let scroll;
+  //   useEffect(() => {
+  //     let scroll;
 
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-      });
-      console.log("Locomotive Scroll initialized");
+  //     const initScroll = async () => {
+  //       const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //       scroll = new LocomotiveScroll({
+  //         el: scrollRef.current,
+  //         smooth: true,
+  //       });
+  //       console.log("Locomotive Scroll initialized");
 
-      locoScrollInstance.current = scroll;
-    };
+  //       locoScrollInstance.current = scroll;
+  //     };
 
-    initScroll();
+  //     initScroll();
 
-    // Optional: cleanup on unmount
-    return () => {
-      if (locoScrollInstance.current) {
-        locoScrollInstance.current.destroy();
-      }
-    };
-  }, []);
+  //     // Optional: cleanup on unmount
+  //     return () => {
+  //       if (locoScrollInstance.current) {
+  //         locoScrollInstance.current.destroy();
+  //       }
+  //     };
+  //   }, []);
 
-  useEffect(() => {
-    // Update scroll after AboutSection mounts
-    if (locoScrollInstance.current) {
-      setTimeout(() => {
-        locoScrollInstance.current.update();
-      }, 500); // slight delay to ensure DOM is ready
-    }
-  });
+  //   useEffect(() => {
+  //     // Update scroll after AboutSection mounts
+  //     if (locoScrollInstance.current) {
+  //       setTimeout(() => {
+  //         locoScrollInstance.current.update();
+  //       }, 500); // slight delay to ensure DOM is ready
+  //     }
+  //   });
   return (
     <>
       <Navbar />
-      <div id="main" data-scroll-container ref={scrollRef}>
-        <Outlet />
-      </div>
+      <Outlet />
     </>
   );
 };
