@@ -1,5 +1,9 @@
+// eslint-disable-next-line no-unused-vars
+import { motion, AnimatePresence } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import FramerButton from "./FramerButton";
+import FramerMagnetic from "./FramerMagnetic";
 
 const servicesData = [
   {
@@ -57,16 +61,55 @@ const Services = () => {
       )
     );
   };
+
   return (
-    <div className="h-full w-full flex justify-center items-center p-1">
-      <div className="text-gray-200 servicesContainer min-h-[120vh] rounded-xl p-8">
+    <div className="h-full w-full flex justify-center items-center p-1 relative">
+      {/* Background layer with noise effect */}
+      <div className="absolute flex justify-center rounded-xl items-center inset-0 overflow-hidden">
+        <div className="servicesContainer w-full h-full rounded-xl m-1 md:m-2">
+          <svg
+            style={{
+              display: "none",
+              position: "absolute",
+              width: 0,
+              height: 0,
+            }}
+          >
+            <filter
+              id="nnnoise-filter"
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              filterUnits="userSpaceOnUse"
+            >
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.6"
+                numOctaves="1"
+                seed="3"
+                result="noise"
+              />
+              <feColorMatrix
+                in="noise"
+                type="matrix"
+                values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.06 0"
+              />
+              <feBlend in="SourceGraphic" in2="noise" mode="overlay" />
+            </filter>
+          </svg>
+        </div>
+      </div>
+
+      {/* Content layer (above background) */}
+      <div className="text-white relative z-10 w-full rounded-xl p-8">
         <div className="w-full mx-auto">
           {/* Header */}
           <div className="mb-12">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-lg font-medium">+ What we do</span>
             </div>
-            <div className="flex justify-center items-baseline gap-4">
+            <div className="ml-auto w-full md:w-[71%] flex items-baseline gap-4">
               <h1 className="text-6xl md:text-8xl tracking-[-0.4rem] font-extralight">
                 Services.
               </h1>
@@ -79,20 +122,17 @@ const Services = () => {
           {/* Accordion Items */}
           <div className="space-y-0">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="first:border-t-0 border-t border-gray-800 last:border-b"
-              >
+              <div key={index} className="">
                 <button
                   onClick={() => toggleService(service.id)}
                   className="w-full py-8 flex items-center"
                 >
-                  <div className="flex w-full items-center justify-between">
+                  <div className="flex gap-4 md:gap-0 w-full items-center justify-between">
                     <div className="text-gray-500 font-bold text-lg">
                       ({service.id})
                     </div>
                     <div className="ml-auto w-full md:w-[70%]">
-                      <h2 className="text-2xl justify-end md:text-4xl font-extralight text-left">
+                      <h2 className="text-xl justify-end md:text-4xl text-white font-extralight text-left">
                         {service.title}
                       </h2>
                     </div>
@@ -106,55 +146,70 @@ const Services = () => {
                   </div>
                 </button>
 
-                {/* Expanded Content */}
-                <div
-                  className={`overflow-hidden ml-auto w-full md:w-[70%] transition-all duration-300 ease-in-out ${
-                    service.isExpanded
-                      ? "max-h-96 opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="pb-8">
-                    <div className="flex flex-wrap gap-8 items-start">
-                      {/* Image */}
-                      <div className="flex-shrink-0">
-                        <img
-                          src={service.image || "/placeholder.svg"}
-                          alt={service.title}
-                          className="w-48 h-32 object-cover rounded-lg"
-                        />
-                      </div>
+                {/* Expanded Content with Animation */}
+                <AnimatePresence initial={false}>
+                  {service.isExpanded && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden ml-auto w-full md:w-[70%] border-gray-800 last:border-b"
+                    >
+                      <div className="pb-8">
+                        <div className="flex flex-col md:flex-row flex-wrap gap-8 items-start">
+                          {/* Image */}
+                          <div className="flex md:flex-row flex-col gap-6">
+                            <div>
+                              <img
+                                src={service.image || "/placeholder.svg"}
+                                alt={service.title}
+                                className="w-full md:w-80 h-40 md:h-36 object-cover rounded-lg"
+                              />
+                            </div>
 
-                      {/* Description */}
-                      <div className="flex-1">
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                          {service.description}
-                        </p>
-                      </div>
+                            {/* Description */}
+                            <div>
+                              <p className="text-gray-300 text-lg w-full md:w-[80%] leading-relaxed md:mb-6">
+                                {service.description}
+                              </p>
+                            </div>
+                          </div>
 
-                      {/* Categories */}
-                      <div className="flex-shrink-0">
-                        <div className="text-right">
-                          <p className="text-gray-500 text-sm mb-3">
-                            Categories
-                          </p>
-                          <div className="flex flex-wrap gap-2 justify-end">
-                            {service.categories.map((category, idx) => (
-                              <span
-                                key={idx}
-                                className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-700"
-                              >
-                                {category}
-                              </span>
-                            ))}
+                          {/* Categories */}
+                          <div className="flex-shrink-0 ml-auto -mt-4">
+                            <div className="text-right md:text-left">
+                              <p className="text-gray-500 text-sm mb-3">
+                                Categories
+                              </p>
+                              <div className="flex flex-wrap gap-2 justify-end">
+                                {service.categories.map((category, idx) => (
+                                  <span
+                                    key={idx}
+                                    className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-700"
+                                  >
+                                    {category}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
+          </div>
+
+          <div className="ml-auto w-full md:w-[71%] my-12">
+            <FramerMagnetic>
+              <button className="w-max px-6 py-2 bg-white text-black text-lg rounded-full">
+                Get Started
+              </button>
+            </FramerMagnetic>
           </div>
         </div>
       </div>

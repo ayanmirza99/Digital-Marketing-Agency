@@ -24,11 +24,11 @@ const AboutSection = () => {
   return (
     <div
       ref={container}
-      className="description md:mt-[100px] p-6 md:p-4 flex flex-col gap-6 justify-center"
+      className="description md:mt-[100px] p-4 flex flex-col gap-6 justify-center"
     >
-      <div className="block lg:hidden text-[1.2rem]">+ About us</div>
+      <div className="block lg:hidden text-[1.1rem]">+ About us</div>
       <div className="body flex md:flex-row flex-col max-w-[1400px] gap-6 md:gap-[40px] relative">
-        <p className="m-0 gap-[8px] md:pl-[100px] text-justify text-[22px] md:text-[36px] leading-[1.2]">
+        <p className="m-0 gap-[8px] md:pl-[100px] text-left md:text-justify text-[28px] md:text-[36px] leading-[1.1] md:leading-[1.2]">
           {phrase.split(" ").map((word, index) => (
             <span
               key={index}
@@ -52,7 +52,7 @@ const AboutSection = () => {
           variants={opacity}
           initial="initial"
           animate={isInView ? "open" : "closed"}
-          className="text-[16px] leading-[1.1] text-gray-700 md:text-[20px] w-full"
+          className="text-[20px] leading-[1.1] text-gray-700 md:text-[20px] w-full"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam possimus
           doloremque voluptates!

@@ -1,6 +1,7 @@
 // import { useEffect, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const Layout = () => {
   //   const scrollRef = useRef(null); // for main scroll container
@@ -42,6 +43,7 @@ const Layout = () => {
     <>
       <Navbar />
       <Outlet />
+      <Footer />
     </>
   );
 };
