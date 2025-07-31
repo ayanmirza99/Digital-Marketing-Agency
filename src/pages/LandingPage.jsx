@@ -5,8 +5,8 @@ import Services from "../components/Services";
 import FAQSection from "../components/FAQSection";
 import MultiStepContact from "../components/MultiStepContact";
 import { useEffect, useState } from "react";
-import Preloader from "../components/preloader/PReLoader";
 import { AnimatePresence } from "motion/react";
+import Preloader from "../components/loader/PreLoader";
 
 const LandingPage = () => {
   const [isLoading, setIsLoading] = useState(true);
