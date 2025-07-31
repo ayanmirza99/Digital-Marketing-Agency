@@ -134,7 +134,7 @@ export default function MultiStepContact() {
           transition={{ duration: 1 }}
         >
           <source
-            src="https://res.cloudinary.com/dyzgzqw8z/video/upload/v1753912260/Drip_in_water_Black_01_-_Free_Stock_Footage_fkmqr9.mp4"
+            src="https://res.cloudinary.com/dyzgzqw8z/video/upload/f_auto,q_auto:good/v1753912260/Drip_in_water_Black_01_-_Free_Stock_Footage_fkmqr9.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.

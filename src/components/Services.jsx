@@ -11,7 +11,8 @@ const servicesData = [
     title: "Web design and development",
     description:
       "Modern, responsive, and user-friendly websites designed to engage visitors and drive conversions.",
-    image: "https://res.cloudinary.com/dyzgzqw8z/image/upload/v1753995458/decimal_eyenzi.jpg",
+    image:
+      "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995458/decimal_eyenzi.jpg",
     categories: ["UI/UX Design", "WordPress", "Scalable Web", "6+"],
     isExpanded: true,
   },
@@ -20,7 +21,8 @@ const servicesData = [
     title: "Digital Marketing",
     description:
       "Comprehensive digital marketing strategies to boost your online presence and reach your target audience effectively.",
-    image: "https://res.cloudinary.com/dyzgzqw8z/image/upload/v1753995458/panda_lzjwt8.jpg",
+    image:
+      "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995458/panda_lzjwt8.jpg",
     categories: ["SEO", "Social Media", "Content Marketing", "Analytics"],
     isExpanded: false,
   },
@@ -29,7 +31,8 @@ const servicesData = [
     title: "Google Ads",
     description:
       "Strategic Google Ads campaigns designed to maximize your ROI and drive qualified traffic to your business.",
-    image: "https://res.cloudinary.com/dyzgzqw8z/image/upload/v1753995457/maven_evumil.jpg",
+    image:
+      "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995456/powell_n7sxcv.jpg",
     categories: ["PPC", "Campaign Management", "Optimization", "Reporting"],
     isExpanded: false,
   },
@@ -38,7 +41,8 @@ const servicesData = [
     title: "Brand Identity",
     description:
       "Complete brand identity solutions including logo design, brand guidelines, and visual identity systems.",
-    image: "https://res.cloudinary.com/dyzgzqw8z/image/upload/v1753995457/maven_evumil.jpg",
+    image:
+      "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995457/maven_evumil.jpg",
     categories: [
       "Logo Design",
       "Brand Guidelines",
@@ -165,6 +169,7 @@ const Services = () => {
                               <img
                                 src={service.image || "/placeholder.svg"}
                                 alt={service.title}
+                                loading="lazy"
                                 className="w-full md:w-80 h-40 md:h-36 object-cover rounded-lg"
                               />
                             </div>

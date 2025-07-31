@@ -34,7 +34,7 @@
 }
 
 .servicesContainer {
-  background-image: url("https://res.cloudinary.com/dyzgzqw8z/image/upload/v1753995456/serviceBg_zbhfke.avif");
+  background-image: url("https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995456/serviceBg_zbhfke.avif");
   filter: url("#nnnoise-filter");
   background-size: cover;
   background-position: center;
