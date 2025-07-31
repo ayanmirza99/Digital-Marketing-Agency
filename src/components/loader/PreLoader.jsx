@@ -5,15 +5,16 @@ import { useEffect, useState } from "react";
 import { opacity, slideUp } from "./anim";
 
 const words = [
-  "Hello",
-  "Bonjour",
-  "Ciao",
-  "Olà",
-  "やあ",
-  "Hallå",
-  "Guten tag",
-  "Hallo",
+  "Marketing",
+  "SEO",
+  "Content",
+  "Social",
+  "Optimize",
+  "Conversion",
+  "Engage",
+  "Audit",
 ];
+
 
 export default function Preloader() {
   const [index, setIndex] = useState(0);

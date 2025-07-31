@@ -511,6 +511,15 @@ export default function MultiStepContact() {
                       </motion.li>
                     ))}
                   </motion.ul>
+                  <div className="border-t pt-4">
+                    <p className="italic text-gray-600 text-sm">
+                      “Our lead conversions doubled within a month after the
+                      audit.”
+                    </p>
+                    <p className="text-gray-800 font-medium text-sm mt-1">
+                      — Sarah, CEO @ GrowthEdge
+                    </p>
+                  </div>
                 </motion.div>
               </motion.div>
             )}
