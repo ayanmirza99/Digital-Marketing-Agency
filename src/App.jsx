@@ -6,7 +6,11 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    const lenis = new Lenis({ lerp: 0.1 });
+    const lenis = new Lenis({
+      lerp: 0.1,
+      smoothWheel: true,
+    });
+
     window.lenis = lenis;
 
     const raf = (time) => {
@@ -20,6 +24,7 @@ function App() {
       window.lenis = undefined;
     };
   }, []);
+
   return (
     <BrowserRouter>
       <Routes>

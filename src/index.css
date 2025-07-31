@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "custom";
-  src: url("./assets/fonts/CustomFont.ttf") format("truetype");
+  src: url("./assets/fonts/CustomFont.ttf") format("woff2");
+  font-display: swap;
 }
 * {
   margin: 0;
@@ -33,7 +34,7 @@
 }
 
 .servicesContainer {
-  background-image: url("/images/serviceBg.avif");
+  background-image: url("https://res.cloudinary.com/dyzgzqw8z/image/upload/v1753995456/serviceBg_zbhfke.avif");
   filter: url("#nnnoise-filter");
   background-size: cover;
   background-position: center;

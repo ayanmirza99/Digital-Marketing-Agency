@@ -13,6 +13,7 @@ const words = [
   "Conversion",
   "Engage",
   "Audit",
+  "Amplify"
 ];
 
 
