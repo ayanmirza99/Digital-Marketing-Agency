@@ -23,7 +23,7 @@ export default function Slider() {
 
   useEffect(() => {
     const checkScreen = () => {
-      setIsSmallScreen(window.innerWidth < 768); // Tailwind's md = 768px
+      setIsSmallScreen(window.innerWidth < 768);
     };
 
     checkScreen();
@@ -33,7 +33,7 @@ export default function Slider() {
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 100%", "end 40%"],
+    offset: ["start 100%", "end 2%"],
   });
 
   const x1 = useTransform(
@@ -44,7 +44,7 @@ export default function Slider() {
   const x2 = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, isSmallScreen ? -150 : -250]
+    [0, isSmallScreen ? -50 : -250]
   );
 
   return (
@@ -62,7 +62,7 @@ export default function Slider() {
           </div>
         ))}
       </motion.div>
-      <motion.div style={{ x: x1 }} className={styles.slider}>
+      <motion.div style={{ x: x1 }} className={`${styles.slider} -left-[10vh] md:-left-0`}>
         {slider2.map((project, index) => (
           <div
             key={index}

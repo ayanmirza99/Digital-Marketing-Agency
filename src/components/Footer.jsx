@@ -14,10 +14,10 @@ export default function Footer() {
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-black rounded-full"></div>
                 <a
-                  href="mailto:contact@bedrockdigital.io"
+                  href="mailto:contact@amplify.io"
                   className="font-medium hover:text-gray-600 transition-colors"
                 >
-                  contact@bedrockdigital.io
+                  contact@amplify.io
                 </a>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function Footer() {
       <div className="bg-black px-6 py-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">
-            Copyright © 2025 Bedrock Digital
+            Copyright © 2025 Amplify™
           </p>
           <nav className="flex space-x-8">
             <a

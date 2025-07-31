@@ -1,7 +1,21 @@
 const HeroSection = () => {
   return (
     <div className="h-[100vh] md:h-[94vh] w-full p-3 pt-1 md:p-4 md:pt-1">
-      <div className="heroContainer relative rounded-xl h-[90%] md:h-full w-full">
+      <div className="relative overflow-hidden rounded-xl h-[90%] md:h-full w-full">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source
+            src="https://res.cloudinary.com/dyzgzqw8z/video/upload/v1753982605/1992-153555258_small_k8lqr8.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute top-0 left-0 w-full h-full bg-white/10 z-[1]" />
         <div className="bg-black/20 rounded-xl z-10 absolute top-0 left-0 h-full w-full"></div>
         <div className="flex absolute top-0 left-0 z-20 text-[1rem] flex-col gap-[20%] md:gap-[10%] h-full w-full">
           <div className="flex p-4 md:flex-row flex-col gap-6 md:gap-8 md:items-center">
