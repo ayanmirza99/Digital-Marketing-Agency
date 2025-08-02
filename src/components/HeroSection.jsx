@@ -1,3 +1,5 @@
+import FramerMagnetic from "./FramerMagnetic";
+
 const HeroSection = () => {
   return (
     <div className="h-[100vh] md:h-[94vh] w-full p-3 pt-1 md:p-4 md:pt-1">
@@ -27,6 +29,11 @@ const HeroSection = () => {
               <div className="">Social Media Marketing</div>
               <div className="">Web Design and Development</div>
               <div className="">SEO Optimization</div>
+              <FramerMagnetic>
+                <button className="w-max px-4 py-3 md:py-1 mt-2 bg-[#f5f5f5] text-black text-[16pxpx] md:text-lg rounded-full">
+                  Get Started
+                </button>
+              </FramerMagnetic>
             </div>
           </div>
           <div className="p-4 md:p-6 w-full md:max-w-[60%] lg:max-w-[40%] text-[1.3em] md:text-[1.5em] text-white selection:bg-[#fff] tracking-tighter selection:text-black leading-[110%]">

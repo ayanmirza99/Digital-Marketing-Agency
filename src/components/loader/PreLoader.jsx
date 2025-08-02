@@ -13,11 +13,10 @@ const words = [
   "Conversion",
   "Engage",
   "Audit",
-  "Amplify"
+  "Amplify",
 ];
 
-
-export default function Preloader() {
+export default function Preloader({ shouldAnimate = true }) {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
@@ -62,7 +61,7 @@ export default function Preloader() {
       exit="exit"
       className={styles.introduction}
     >
-      {dimension.width > 0 && (
+      {shouldAnimate && dimension.width > 0 && (
         <>
           <motion.p variants={opacity} initial="initial" animate="enter">
             <span></span>

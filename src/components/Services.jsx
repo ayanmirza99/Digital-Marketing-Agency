@@ -2,7 +2,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
-import FramerButton from "./FramerButton";
 import FramerMagnetic from "./FramerMagnetic";
 
 const servicesData = [

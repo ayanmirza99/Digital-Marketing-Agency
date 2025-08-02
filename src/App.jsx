@@ -1,8 +1,18 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Layout from "./Layout";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
+import { AnimatePresence } from "motion/react";
+import ServicesPage from "./pages/ServicesPage";
+import PageTransition from "./components/PageTransition";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   useEffect(() => {
@@ -24,16 +34,39 @@ function App() {
       window.lenis = undefined;
     };
   }, []);
-
+  const location = useLocation();
   return (
-    <BrowserRouter>
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         <Route path="*" element={<Navigate to={`/`} replace />} />
         <Route element={<Layout />}>
-          <Route index element={<LandingPage />} />
+          <Route
+            index
+            element={
+              // <PageTransition>
+                <LandingPage />
+              // </PageTransition>
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <PageTransition>
+                <ServicesPage />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <PageTransition>
+                <ContactPage />
+              </PageTransition>
+            }
+          />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </AnimatePresence>
   );
 }
 

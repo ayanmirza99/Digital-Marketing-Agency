@@ -115,10 +115,10 @@ const LandingPage = () => {
           <>
             <HeroSection />
             <AboutSection />
+            <MultiStepContact />
             <Slider />
             <Services />
             <FAQSection />
-            <MultiStepContact />
           </>
         )}
       </div>

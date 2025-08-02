@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Menu from "./Menu";
 import FramerMagnetic from "./FramerMagnetic";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,16 +67,24 @@ const Navbar = () => {
           animate={isOpen ? "hidden" : "visible"}
         >
           <FramerMagnetic>
-            <div className="cursor-pointer">Home</div>
+            <div className="cursor-pointer">
+              <Link to={"/"}>Home</Link>
+            </div>
           </FramerMagnetic>
           <FramerMagnetic>
-            <div className="cursor-pointer">About</div>
+            <div className="cursor-pointer">
+              <Link to={"/about"}>About</Link>
+            </div>
           </FramerMagnetic>
           <FramerMagnetic>
-            <div className="cursor-pointer">Services</div>
+            <div className="cursor-pointer">
+              <Link to={"/services"}>Services</Link>
+            </div>
           </FramerMagnetic>
           <FramerMagnetic>
-            <div className="cursor-pointer">Contact</div>
+            <div className="cursor-pointer">
+              <Link to={"/contact"}>Contact</Link>
+            </div>
           </FramerMagnetic>
         </motion.div>
 
@@ -98,7 +107,9 @@ const Navbar = () => {
         </div>
       </motion.div>
 
-      <AnimatePresence>{isOpen && <Menu />}</AnimatePresence>
+      <AnimatePresence>
+        {isOpen && <Menu setIsOpen={setIsOpen} />}
+      </AnimatePresence>
     </>
   );
 };

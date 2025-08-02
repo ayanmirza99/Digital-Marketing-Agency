@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Menu = () => {
+const Menu = ({ setIsOpen }) => {
   const children = {
     hidden: {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -76,6 +76,7 @@ const Menu = () => {
               <Link
                 className="text-[2em] tracking-[-0.2rem] font-extralight text-black transition-colors duration-100 ease-in hover:text-gray-800"
                 to="/"
+                onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
@@ -91,6 +92,7 @@ const Menu = () => {
               <Link
                 className="text-[2em] tracking-[-0.2rem] font-extralight text-black transition-colors duration-100 ease-in hover:text-gray-800"
                 to="/about"
+                onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
@@ -106,6 +108,7 @@ const Menu = () => {
               <Link
                 className="text-[2em] tracking-[-0.2rem] font-extralight text-black transition-colors duration-100 ease-in hover:text-gray-800"
                 to="/services"
+                onClick={() => setIsOpen(false)}
               >
                 Services
               </Link>
@@ -121,6 +124,7 @@ const Menu = () => {
               <Link
                 className="text-[2em] tracking-[-0.2rem] font-extralight text-black transition-colors duration-100 ease-in hover:text-gray-800"
                 to="/contact"
+                onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
