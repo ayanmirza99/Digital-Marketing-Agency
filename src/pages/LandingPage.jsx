@@ -20,7 +20,7 @@ const LandingPage = () => {
 
     // List of all external assets to preload
     const assetUrls = [
-      "https://res.cloudinary.com/dyzgzqw8z/video/upload/f_auto,q_auto:good/v1753982605/1992-153555258_small_k8lqr8.mp4",
+      "https://res.cloudinary.com/dyzgzqw8z/video/upload/f_auto,q_auto:good/v1753982605/Untitled_design_jqewtj.webm",
       // "https://res.cloudinary.com/dyzgzqw8z/video/upload/f_auto,q_auto:good/v1753912260/Drip_in_water_Black_01_-_Free_Stock_Footage_fkmqr9.mp4",
       // "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995458/decimal_eyenzi.jpg",
       // "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995458/panda_lzjwt8.jpg",
