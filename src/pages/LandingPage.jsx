@@ -20,7 +20,7 @@ const LandingPage = () => {
 
     // List of all external assets to preload
     const assetUrls = [
-      "https://res.cloudinary.com/dyzgzqw8z/video/upload/f_auto,q_auto:good/v1753982605/Untitled_design_jqewtj.webm",
+      // "https://res.cloudinary.com/dyzgzqw8z/video/upload/f_auto,q_auto:good/v1753982605/Untitled_design_jqewtj.webm",
       // "https://res.cloudinary.com/dyzgzqw8z/video/upload/f_auto,q_auto:good/v1753912260/Drip_in_water_Black_01_-_Free_Stock_Footage_fkmqr9.mp4",
       // "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995458/decimal_eyenzi.jpg",
       // "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995458/panda_lzjwt8.jpg",
@@ -30,7 +30,7 @@ const LandingPage = () => {
       // "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995457/funny_k8t4mw.jpg",
       // "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995457/c2_dtzlla.jpg",
       // "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_800/v1753995456/powell_n7sxcv.jpg",
-      "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_1920/v1753995456/serviceBg_zbhfke.avif",
+      // "https://res.cloudinary.com/dyzgzqw8z/image/upload/f_auto,q_auto,w_1920/v1753995456/serviceBg_zbhfke.avif",
     ];
 
     const loadAsset = (url) => {
@@ -103,7 +103,21 @@ const LandingPage = () => {
   return (
     <main>
       <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
+        {isLoading && (
+          <Preloader
+            words={[
+              "Marketing",
+              "SEO",
+              "Content",
+              "Social",
+              "Optimize",
+              "Conversion",
+              "Engage",
+              "Audit",
+              "Amplify",
+            ]}
+          />
+        )}
       </AnimatePresence>
 
       <div

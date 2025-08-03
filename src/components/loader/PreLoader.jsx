@@ -4,19 +4,7 @@ import styles from "./style.module.scss";
 import { useEffect, useState } from "react";
 import { opacity, slideUp } from "./anim";
 
-const words = [
-  "Marketing",
-  "SEO",
-  "Content",
-  "Social",
-  "Optimize",
-  "Conversion",
-  "Engage",
-  "Audit",
-  "Amplify",
-];
-
-export default function Preloader({ shouldAnimate = true }) {
+export default function Preloader({ words }) {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
@@ -61,7 +49,7 @@ export default function Preloader({ shouldAnimate = true }) {
       exit="exit"
       className={styles.introduction}
     >
-      {shouldAnimate && dimension.width > 0 && (
+      {dimension.width > 0 && (
         <>
           <motion.p variants={opacity} initial="initial" animate="enter">
             <span></span>

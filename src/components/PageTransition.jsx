@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 
 const PageTransition = ({ children }) => {
@@ -8,6 +8,9 @@ const PageTransition = ({ children }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 1, y: -20 }}
       transition={{ duration: 0.2 }}
+      onAnimationComplete={() => {
+        window.scrollTo(0, 0);
+      }}
     >
       {children}
     </motion.div>
