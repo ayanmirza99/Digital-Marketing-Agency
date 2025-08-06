@@ -45,11 +45,11 @@ const HeroSection = () => {
               </FramerMagnetic>
             </div>
           </div>
-          <div className="p-4 md:p-6 w-full md:max-w-[60%] lg:max-w-[40%] text-[1.3em] md:text-[1.5em] text-white selection:bg-[#fff] tracking-tighter selection:text-black leading-[110%]">
+          <div className="p-4 md:p-6 w-full md:max-w-[60%] lg:max-w-[42%] text-[1.3em] md:text-[1.5em] text-white selection:bg-[#fff] tracking-tighter selection:text-black leading-[110%]">
             <span className="inline-block md:min-w-[100px]"></span>
-            No generic websites. No empty marketing promises.{" "}
+            Empower Your Business Growth with Stunning Websites and Strategic Marketing.{" "}
             <span className="text-gray-100">
-              Just tools and strategies that help your business grow and your
+              Tools and strategies that help your business grow and your
               brand shine.
             </span>
           </div>
