@@ -7,6 +7,7 @@ import { AnimatePresence } from "motion/react";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./components/ScrollToTop";
+import SEO from "./pages/services/SEO";
 
 function App() {
   useEffect(() => {
@@ -36,24 +37,10 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="*" element={<Navigate to={`/`} replace />} />
           <Route element={<Layout />}>
-            <Route
-              index
-              element={
-                  <LandingPage />
-              }
-            />
-            <Route
-              path="/services"
-              element={
-                  <ServicesPage />
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                  <ContactPage />
-              }
-            />
+            <Route index element={<LandingPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/seo" element={<SEO />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Route>
         </Routes>
       </AnimatePresence>

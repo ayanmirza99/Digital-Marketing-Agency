@@ -32,7 +32,7 @@ const AboutSection = () => {
       <div className="body flex md:flex-row flex-col max-w-[1400px] gap-6 md:gap-[40px] relative">
         <div>
           <p className="m-0 lg:flex items-center md:pl-[100px] text-left md:text-justify text-[24px] md:text-[30px] font-extralight leading-[1.1] md:leading-[1.2] mb-6">
-            <div className="rounded-full hidden mr-2 lg:flex items-center justify-center bg-black/80 h-6 w-6 text-gray-200 pb-[0.5px] text-[28px]">+</div>
+            <div className="rounded-full hidden lg:block mb-2 mr-2 text-[46px]">+</div>
             {phrase1.split(" ").map((word, index) => (
               <span
                 key={index}
