@@ -8,7 +8,6 @@ import { useEffect, useState, useRef } from "react";
 import Preloader from "../../components/loader/PreLoader";
 import { seoServiceData } from "../../data/servicePageData";
 import { Link } from "react-router-dom";
-import FramerButton from "../../components/FramerButton";
 import FramerMagnetic from "../../components/FramerMagnetic";
 
 const SEO = ({ params }) => {
@@ -121,13 +120,13 @@ const SEO = ({ params }) => {
             <div className="flex flex-col">
               <motion.h1
                 variants={heroChild}
-                className="text-5xl selection:bg-[#383838] selection:text-white lg:text-8xl text-black mb-4 tracking-[-0.3rem] lg:tracking-[-0.5rem] font-bold"
+                className="text-6xl selection:bg-[#383838] selection:text-white lg:text-8xl text-black mb-4 md:tracking-[-0.3rem] lg:tracking-[-0.5rem] font-bold"
               >
                 {serviceData.title}
               </motion.h1>
               <motion.h2
                 variants={heroChild}
-                className="text-2xl lg:text-4xl text-gray-700 mb-8 tracking-[-0.1rem]"
+                className="text-3xl lg:text-4xl text-gray-700 mb-8 tracking-[-0.1rem]"
               >
                 {serviceData.subtitle}
               </motion.h2>
@@ -135,13 +134,13 @@ const SEO = ({ params }) => {
 
             <motion.div
               variants={heroChild}
-              className="w-[300px] md:w-[400px] lg:max-w-md"
+              className="w-full md:w-[400px] lg:max-w-md"
             >
-              <div className="flex items-center mb-6">
+              <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-3 h-3 bg-black rounded-full"></div>
                 <span className="ml-4 text-sm text-gray-600">(2016-256)</span>
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed mb-8">
+              <p className="text-gray-600 text-[18px] md:text-sm leading-relaxed md:mb-8">
                 {serviceData.description}
               </p>
             </motion.div>
@@ -158,9 +157,9 @@ const SEO = ({ params }) => {
               <motion.h3
                 key={index}
                 variants={heroChild}
-                className="text-xl lg:text-2xl text-gray-800 mb-2 flex gap-4 items-center font-medium"
+                className="text-[18px] lg:text-2xl text-gray-800 mb-2 flex gap-4 items-center font-medium"
               >
-                <span className="h-3 w-3 bg-black/80 rounded-full"></span>
+                <span className="h-3 w-3 bg-black/80 rounded-full flex-shrink-0 inline-block"></span>
                 {tagline}
               </motion.h3>
             ))}
@@ -175,12 +174,12 @@ const SEO = ({ params }) => {
           >
             <div className="flex lg:flex-row flex-col gap-8">
               <div className="lg:w-1/3">
-                <h4 className="text-3xl selection:bg-[#383838] selection:text-white lg:text-4xl text-black mb-4 font-bold tracking-[-0.1rem]">
+                <h4 className="text-3xl selection:bg-[#383838] selection:text-white lg:text-4xl text-black md:mb-4 font-bold tracking-[-0.1rem]">
                   SEO Solutions
                 </h4>
               </div>
               <div className="lg:w-2/3">
-                <p className="text-gray-600 text-base leading-relaxed">
+                <p className="text-gray-600 mb-2 md:mb-0 text-base leading-relaxed">
                   {serviceData.mainDescription}
                 </p>
               </div>
@@ -205,7 +204,7 @@ const SEO = ({ params }) => {
                   delay: index * 0.2,
                   ease: "easeInOut",
                 }}
-                className="bg-white border cursor-pointer border-gray-200 rounded-xl p-8 hover:shadow-2xl transition-all duration-300"
+                className="bg-white border cursor-pointer border-gray-200 rounded-xl p-4 md:p-8 hover:shadow-2xl transition-all duration-300"
               >
                 <div className="flex items-start mb-6">
                   <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center mr-4">
