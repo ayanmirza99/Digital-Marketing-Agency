@@ -56,9 +56,11 @@ const Navbar = () => {
         variants={colorTransition}
         animate={isOpen ? "opened" : "closed"}
         initial="closed"
-        className="h-[50px] sticky top-0 left-0 z-50 flex items-center justify-between px-6 text-[1.6rem]"
+        className="h-[50px] selection:bg-[#383838] selection:text-white sticky top-0 left-0 z-50 flex items-center justify-between px-6 text-[1.6rem]"
       >
-        <div className="text-[1em]">Amplify™</div>
+        <Link className="text-[1em]" to={"/"}>
+          Amplify™
+        </Link>
 
         <motion.div
           className="text-[0.6em] font-semibold flex-1 hidden lg:flex px-6 justify-around items-center"
@@ -69,11 +71,6 @@ const Navbar = () => {
           <FramerMagnetic>
             <div className="cursor-pointer">
               <Link to={"/"}>Home</Link>
-            </div>
-          </FramerMagnetic>
-          <FramerMagnetic>
-            <div className="cursor-pointer">
-              <Link to={"/about"}>About</Link>
             </div>
           </FramerMagnetic>
           <FramerMagnetic>

@@ -64,7 +64,7 @@ const Menu = ({ setIsOpen }) => {
           ))}
       </div>
 
-      <section className="w-full h-full absolute inset-0 flex justify-center md:text-[2rem] text-[1.5rem] items-center z-40">
+      <section className="w-full h-full selection:bg-[#383838] selection:text-white absolute inset-0 flex justify-center md:text-[2rem] text-[1.5rem] items-center z-40">
         <ul className="w-[900px] flex items-center flex-col leading-none">
           <li className="overflow-hidden">
             <motion.div
@@ -79,22 +79,6 @@ const Menu = ({ setIsOpen }) => {
                 onClick={() => setIsOpen(false)}
               >
                 Home
-              </Link>
-            </motion.div>
-          </li>
-          <li className="overflow-hidden">
-            <motion.div
-              variants={navLink}
-              initial="hidden"
-              animate="show"
-              exit="exit"
-            >
-              <Link
-                className="text-[2em] tracking-[-0.2rem] font-extralight text-black transition-colors duration-100 ease-in hover:text-gray-800"
-                to="/about"
-                onClick={() => setIsOpen(false)}
-              >
-                About
               </Link>
             </motion.div>
           </li>

@@ -120,7 +120,7 @@ export default function MultiStepContact() {
   };
 
   return (
-    <div className="min-h-screen w-full p-2 flex flex-col justify-center items-center">
+    <div className="min-h-screen selection:bg-[#848484] selection:text-white w-full p-2 flex flex-col justify-center items-center">
       <div className="flex-grow flex items-center contactContainer w-full py-16 px-6 relative rounded-xl overflow-hidden">
         {/* Background Video */}
         <motion.video
@@ -175,7 +175,7 @@ export default function MultiStepContact() {
                   </div>
                 ) : (
                   <>
-                    <h1 className="text-4xl lg:text-6xl tracking-[-0.1rem] text-white mb-6">
+                    <h1 className="text-4xl selection:bg-[#383838] selection:text-white lg:text-6xl tracking-[-0.1rem] text-white mb-6">
                       Schedule your free Digital Audit.
                     </h1>
                     <p className="text-gray-300 text-lg leading-[1.4]">
@@ -190,7 +190,7 @@ export default function MultiStepContact() {
                             setIsVisible(true);
                             setCurrentStep(1);
                           }}
-                          className="w-max px-6 py-2 bg-white text-black text-lg rounded-full"
+                          className="w-max selection:bg-[#383838] selection:text-white px-6 py-2 bg-white text-black text-lg rounded-full"
                         >
                           Get Started
                         </button>
@@ -201,7 +201,7 @@ export default function MultiStepContact() {
 
                 {currentStep === 1 && (
                   <>
-                    <h1 className="text-4xl lg:text-6xl tracking-[-0.1rem] text-white mb-6">
+                    <h1 className="text-4xl lg:text-6xl tracking-[-0.1rem] selection:bg-[#383838] selection:text-white text-white mb-6">
                       Schedule your free Digital Audit.
                     </h1>
                     <p className="text-gray-300 md:max-w-md text-lg leading-[1.4]">
@@ -213,7 +213,7 @@ export default function MultiStepContact() {
 
                 {currentStep === 2 && (
                   <>
-                    <h1 className="text-4xl lg:text-6xl tracking-[-0.1rem] text-white mb-6">
+                    <h1 className="text-4xl lg:text-6xl tracking-[-0.1rem] selection:bg-[#383838] selection:text-white text-white mb-6">
                       Revenue range.
                     </h1>
                     <p className="text-gray-300 md:max-w-md text-lg leading-[1.4]">
@@ -225,7 +225,7 @@ export default function MultiStepContact() {
 
                 {currentStep === 3 && (
                   <>
-                    <h1 className="text-4xl lg:text-6xl tracking-[-0.1rem] text-white mb-6">
+                    <h1 className="text-4xl selection:bg-[#383838] selection:text-white lg:text-6xl tracking-[-0.1rem] text-white mb-6">
                       Almost done.
                     </h1>
                     <p className="text-gray-300 md:max-w-md text-lg leading-[1.4]">
@@ -254,7 +254,7 @@ export default function MultiStepContact() {
                       variants={stepTransition}
                       className="space-y-4"
                     >
-                      <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                      <h2 className="text-2xl selection:bg-[#383838] selection:text-white font-bold text-gray-900 mb-6">
                         Select your industry
                       </h2>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -295,7 +295,7 @@ export default function MultiStepContact() {
                       className="space-y-4"
                     >
                       <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-2xl font-bold text-gray-900">
+                        <h2 className="text-2xl selection:bg-[#383838] selection:text-white font-bold text-gray-900">
                           Monthly revenue
                         </h2>
                       </div>
@@ -342,7 +342,7 @@ export default function MultiStepContact() {
                       variants={formTransition}
                     >
                       <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-2xl font-bold text-gray-900">
+                        <h2 className="text-2xl selection:bg-[#383838] selection:text-white font-bold text-gray-900">
                           Contact information
                         </h2>
                         <button

@@ -26,7 +26,7 @@ const AboutSection = () => {
   return (
     <div
       ref={container}
-      className="description md:mt-[100px] mb-[180px] p-4 flex flex-col gap-6 justify-center"
+      className="description selection:bg-[#383838] selection:text-white md:mt-[100px] mb-[180px] p-4 flex flex-col gap-6 justify-center"
     >
       <div className="block lg:hidden text-[1.1rem]">+ About us</div>
       <div className="body flex md:flex-row flex-col max-w-[1400px] gap-6 md:gap-[40px] relative">
@@ -77,7 +77,7 @@ const AboutSection = () => {
           variants={opacity}
           initial="initial"
           animate={isInView ? "open" : "closed"}
-          className="text-[18px] leading-[1.1] text-gray-700 md:text-[20px] w-full"
+          className="text-[18px] leading-[1.1] selection:bg-[#848484] selection:text-white text-gray-700 md:text-[20px] w-full"
         >
           We’re on a journey to make history as the most impactful digital
           marketing agency ever—crafting a legacy of innovation, growth, and

@@ -7,6 +7,8 @@ import MultiStepContact from "../components/MultiStepContact";
 import { useEffect, useState, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "../components/loader/PreLoader";
+import Testemonials from "../components/Testemonials";
+import { PackagesSection } from "../components/Packages";
 
 const LandingPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -132,6 +134,8 @@ const LandingPage = () => {
             <MultiStepContact />
             <Slider />
             <Services />
+            <PackagesSection />
+            <Testemonials />
             <FAQSection />
           </>
         )}

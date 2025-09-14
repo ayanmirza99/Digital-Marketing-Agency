@@ -27,7 +27,7 @@ const ServicesPage = () => {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader words={["Services"]} />}
       </AnimatePresence>
-      <div className="min-h-screen overflow-y-hidden z-10 mt-[25vh] mb-[10vh] w-full flex justify-center items-center p-4 md:p-6">
+      <div className="min-h-screen overflow-y-hidden selection:bg-[#383838] selection:text-white z-10 mt-[25vh] mb-[10vh] w-full flex justify-center items-center p-4 md:p-6">
         <div className="w-full md:w-[80%] mx-auto">
           {/* Header Section */}
           <div className="flex lg:flex-row flex-col justify-between items-start lg:items-center mb-[34vh] md:mb-[15vh]">
@@ -40,9 +40,9 @@ const ServicesPage = () => {
             <div className="w-full md:w-[400px] lg:max-w-md">
               <div className="flex items-center mb-6">
                 <div className="w-3 h-3 bg-black rounded-full"></div>
-                <span className="ml-4 text-[18px] md:text-sm text-gray-600">(2016-256)</span>
+                <span className="ml-4 text-[18px] selection:bg-[#848484] selection:text-white md:text-sm text-gray-600">(2016-256)</span>
               </div>
-              <p className="text-gray-600 text-[18px] md:text-sm leading-relaxed mb-8">
+              <p className="text-gray-600 selection:bg-[#848484] selection:text-white text-[18px] md:text-sm leading-relaxed mb-8">
                 We've helped businesses across industries achieve their goals.
                 Here are some of our recent projects.
               </p>

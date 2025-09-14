@@ -9,6 +9,7 @@ import Preloader from "../../components/loader/PreLoader";
 import { seoServiceData } from "../../data/servicePageData";
 import { Link } from "react-router-dom";
 import FramerMagnetic from "../../components/FramerMagnetic";
+import { PackagesSection } from "../../components/Packages";
 
 const SEO = ({ params }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -223,6 +224,7 @@ const SEO = ({ params }) => {
             ))}
           </motion.div>
 
+          <PackagesSection />
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -240,9 +242,9 @@ const SEO = ({ params }) => {
                 {serviceData.cta}
               </p>
               <FramerMagnetic>
-                <button className="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                <Link to={"/contact"} className="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                   Get Free Audit
-                </button>
+                </Link>
               </FramerMagnetic>
             </div>
           </motion.div>

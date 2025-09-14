@@ -1,6 +1,7 @@
 import { AnimatePresence } from "motion/react";
 import Preloader from "../components/loader/PreLoader";
 import { useEffect, useState } from "react";
+import MultiStepContact from "../components/MultiStepContact";
 
 const ContactPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +16,7 @@ const ContactPage = () => {
         {isLoading && <Preloader words={["Contact"]} />}
       </AnimatePresence>
       <div className="h-screen w-full flex justify-center items-center">
-        ContactPage
+        <MultiStepContact />
       </div>
     </main>
   );

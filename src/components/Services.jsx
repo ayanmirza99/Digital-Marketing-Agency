@@ -66,7 +66,7 @@ const Services = () => {
   };
 
   return (
-    <div className="h-full w-full flex justify-center items-center p-1 relative">
+    <div className="h-full selection:bg-[#383838] selection:text-white w-full flex justify-center items-center p-1 relative">
       {/* Background layer with noise effect */}
       <div className="absolute flex justify-center rounded-xl items-center inset-0 overflow-hidden">
         <div className="servicesContainer w-full h-full rounded-xl m-1 md:m-2">
