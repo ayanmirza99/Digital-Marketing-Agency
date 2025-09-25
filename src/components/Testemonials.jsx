@@ -92,7 +92,7 @@ const Testemonials = () => {
               </div>
             </div>
             <div className="flex flex-col gap-8 px-4 pb-1">
-              <h1 className="text-2xl">Amplify™</h1>
+              <h1 className="text-2xl">Adify™</h1>
             </div>
             <div className="w-full flex justify-between items-center pl-4">
               <div className="w-1/2 flex">
@@ -267,7 +267,7 @@ const Testemonials = () => {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                Working with Amplify was a game-changer for our e-commerce
+                Working with Adify was a game-changer for our e-commerce
                 store. Their redesign and targeted ad campaigns boosted our
                 conversion rate by 68% and doubled monthly revenue in just four
                 months.
@@ -328,7 +328,7 @@ const Testemonials = () => {
                 transition={{ duration: 0.2 }}
               >
                 We were searching for business growth experts who actually
-                deliver, and Amplify exceeded expectations. They helped us scale
+                deliver, and Adify exceeded expectations. They helped us scale
                 with a full-funnel strategy that increased qualified leads by
                 70%.
               </motion.p>
@@ -443,7 +443,7 @@ const Testemonials = () => {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                If you're looking for the top SEO company in the U.S., Amplify
+                If you're looking for the top SEO company in the U.S., Adify
                 is it. They got us ranking on page one for competitive keywords
                 in under 90 days, and organic traffic has more than doubled.
               </motion.p>

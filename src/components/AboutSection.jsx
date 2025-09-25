@@ -22,7 +22,7 @@ const AboutSection = () => {
   const phrase1 =
     "Empowering Businesses to Thrive in the Digital World";
   const phrase2 =
-    "At Amplify, our mission is simple — turn visibility into revenue. Trusted by 170+ success stories, we exist to help ambitious businesses grow faster, smarter, and more profitably through full-funnel digital marketing strategies and conversion-focused web development.";
+    "At Adify, our mission is simple — turn visibility into revenue. Trusted by 170+ success stories, we exist to help ambitious businesses grow faster, smarter, and more profitably through full-funnel digital marketing strategies and conversion-focused web development.";
   return (
     <div
       ref={container}

@@ -59,7 +59,7 @@ const Navbar = () => {
         className="h-[50px] selection:bg-[#383838] selection:text-white sticky top-0 left-0 z-50 flex items-center justify-between px-6 text-[1.6rem]"
       >
         <Link className="text-[1em]" to={"/"}>
-          Amplify™
+          Adify™
         </Link>
 
         <motion.div

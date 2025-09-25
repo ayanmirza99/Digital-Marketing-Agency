@@ -116,7 +116,7 @@ const LandingPage = () => {
               "Conversion",
               "Engage",
               "Audit",
-              "Amplify",
+              "Adify",
             ]}
           />
         )}

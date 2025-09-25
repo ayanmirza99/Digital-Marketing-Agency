@@ -14,10 +14,10 @@ export default function Footer() {
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-black rounded-full"></div>
                 <a
-                  href="mailto:contact@amplify.io"
+                  href="mailto:contact@Adify.io"
                   className="font-medium hover:text-gray-600 transition-colors"
                 >
-                  contact@amplify.io
+                  contact@Adify.io
                 </a>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Footer() {
       </div>
       <div className="text-center md:text-right py-8 md:py-0 px-4">
         <h2 className="text-[20vw] md:text-[16vw] select-none tracking-[-0.02em] font-semibold">
-          Amplify<span className="font-light">™</span>
+          Adify<span className="font-light">™</span>
         </h2>
       </div>
 
@@ -151,7 +151,7 @@ export default function Footer() {
       <div className="bg-black px-6 py-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">
-            Copyright © 2025 Amplify™
+            Copyright © 2025 Adify™
           </p>
           <nav className="flex space-x-8">
             <a
