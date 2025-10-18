@@ -8,6 +8,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./components/ScrollToTop";
 import SEO from "./pages/services/SEO";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
           </Route>
         </Routes>
       </AnimatePresence>
+      <Toaster position="top-right" />
     </>
   );
 }

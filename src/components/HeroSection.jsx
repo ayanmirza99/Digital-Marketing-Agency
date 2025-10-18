@@ -1,8 +1,10 @@
 import { useState } from "react";
 import FramerMagnetic from "./FramerMagnetic";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const [videoReady, setVideoReady] = useState(false);
+  const navigate = useNavigate();
   return (
     <div className="h-[100vh] md:h-[94vh] w-full p-3 pt-1 md:p-4 md:pt-1">
       <div className="relative overflow-hidden rounded-xl h-[90%] md:h-full w-full">
@@ -39,7 +41,10 @@ const HeroSection = () => {
               <div className="">Web Design and Development</div>
               <div className="">SEO Optimization</div>
               <FramerMagnetic>
-                <button className="w-max px-4 md:px-6 py-3 md:py-[5px] mt-2 bg-[#f5f5f5] text-black text-[16px] md:text-lg rounded-full">
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="w-max px-4 md:px-6 py-3 md:py-[5px] mt-2 bg-[#f5f5f5] text-black text-[16px] md:text-lg rounded-full"
+                >
                   Get Started
                 </button>
               </FramerMagnetic>
@@ -47,10 +52,11 @@ const HeroSection = () => {
           </div>
           <div className="p-4 md:p-6 w-full md:max-w-[60%] lg:max-w-[42%] text-[1.3em] md:text-[1.5em] text-white selection:bg-[#fff] tracking-tighter selection:text-black leading-[110%]">
             <span className="inline-block md:min-w-[100px]"></span>
-            Empower Your Business Growth with Stunning Websites and Strategic Marketing.{" "}
+            Empower Your Business Growth with Stunning Websites and Strategic
+            Marketing.{" "}
             <span className="text-gray-100">
-              Tools and strategies that help your business grow and your
-              brand shine.
+              Tools and strategies that help your business grow and your brand
+              shine.
             </span>
           </div>
         </div>

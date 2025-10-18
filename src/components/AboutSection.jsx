@@ -26,7 +26,7 @@ const AboutSection = () => {
   return (
     <div
       ref={container}
-      className="description selection:bg-[#383838] selection:text-white md:mt-[100px] mb-[180px] p-4 flex flex-col gap-6 justify-center"
+      className="description selection:bg-[#383838] selection:text-white md:mt-[100px] p-4 flex flex-col gap-6 justify-center"
     >
       <div className="block lg:hidden text-[1.1rem]">+ About us</div>
       <div className="body flex md:flex-row flex-col max-w-[1400px] gap-6 md:gap-[40px] relative">

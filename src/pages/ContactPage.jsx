@@ -15,7 +15,7 @@ const ContactPage = () => {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader words={["Contact"]} />}
       </AnimatePresence>
-      <div className="h-screen w-full flex justify-center items-center">
+      <div className="min-h-screen w-full flex justify-center items-center">
         <MultiStepContact />
       </div>
     </main>

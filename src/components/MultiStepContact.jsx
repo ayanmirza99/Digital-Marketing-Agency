@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import FramerMagnetic from "./FramerMagnetic";
 import { Check } from "lucide-react";
+import toast from "react-hot-toast";
 
 export default function MultiStepContact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -97,20 +98,51 @@ export default function MultiStepContact() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Form submitted successfully!");
-    setFormData({
-      industry: "",
-      revenue: "",
-      firstName: "",
-      lastName: "",
-      email: "",
-      company: "",
-      phone: "",
-      message: "",
-    });
+
+    const toastId = toast.loading("Submitting...");
+
+    try {
+      const data = {
+        access_key: "cf7f76d2-1e71-4a55-a946-149c844aa775",
+        ...formData,
+      };
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Form submitted successfully!", { id: toastId });
+
+        // Reset form and step
+        setFormData({
+          industry: "",
+          revenue: "",
+          firstName: "",
+          lastName: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+        });
+        setCurrentStep(0);
+        setIsVisible(false);
+      } else {
+        toast.error("Failed to send. Please try again.", { id: toastId });
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again later.", {
+        id: toastId,
+      });
+    }
   };
 
   const goBack = () => {

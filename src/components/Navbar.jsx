@@ -58,8 +58,9 @@ const Navbar = () => {
         initial="closed"
         className="h-[50px] selection:bg-[#383838] selection:text-white sticky top-0 left-0 z-50 flex items-center justify-between px-6 text-[1.6rem]"
       >
-        <Link className="text-[1em]" to={"/"}>
-          Adify™
+        <Link className="text-[1.2em] lg:text-[1em] flex items-center" to={"/"}>
+          <img src={"/logo.png"} className="w-[7vw] h-[7vw] sm:w-[4.5vw] sm:h-[4.5vw] md:w-[4vw] md:h-[4vw] lg:w-[2.5vw] lg:h-[2.5vw] xl:w-[1.5vw] xl:h-[1.5vw] -mt-1" alt="logo" />
+          dify™
         </Link>
 
         <motion.div

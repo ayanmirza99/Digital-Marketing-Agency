@@ -131,10 +131,10 @@ const LandingPage = () => {
           <>
             <HeroSection />
             <AboutSection />
+            <PackagesSection />
             <MultiStepContact />
             <Slider />
             <Services />
-            <PackagesSection />
             <Testemonials />
             <FAQSection />
           </>

@@ -7,17 +7,14 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Contact Information */}
             <div className="space-y-3">
-              <p className="font-medium">
-                7500 Viscount Blvd, El Paso, TX 79925
-              </p>
               <p className="font-medium">+1 (915) 881 9119</p>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-black rounded-full"></div>
                 <a
-                  href="mailto:contact@Adify.io"
+                  href="mailto:adifydigital@outlook.com"
                   className="font-medium hover:text-gray-600 transition-colors"
                 >
-                  contact@Adify.io
+                  adifydigital@outlook.com
                 </a>
               </div>
             </div>
@@ -27,28 +24,22 @@ export default function Footer() {
                 <h3 className="text-gray-600 font-medium mb-4">Navigation</h3>
                 <nav className="space-y-2">
                   <a
-                    href="#"
+                    href="/"
                     className="block font-medium hover:text-gray-600 transition-colors"
                   >
                     Home
                   </a>
                   <a
-                    href="#"
+                    href="/services"
                     className="block font-medium hover:text-gray-600 transition-colors"
                   >
-                    About us
+                    Services
                   </a>
                   <a
-                    href="#"
+                    href="/contact"
                     className="block font-medium hover:text-gray-600 transition-colors"
                   >
-                    Projects
-                  </a>
-                  <a
-                    href="#"
-                    className="block font-medium hover:text-gray-600 transition-colors"
-                  >
-                    Blog
+                    Contact
                   </a>
                 </nav>
               </div>
@@ -142,8 +133,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center md:text-right py-8 md:py-0 px-4">
-        <h2 className="text-[20vw] md:text-[16vw] select-none tracking-[-0.02em] font-semibold">
-          Adify<span className="font-light">™</span>
+        <h2 className="flex items-center md:justify-end text-[26vw] md:text-[16vw] select-none tracking-[-0.02em] font-semibold">
+          <img src="/logo.png" alt="logo" className="w-[15vh] h-[15vh] md:w-[18vh] md:h-[18vh] lg:w-[20vh] lg:h-[20vh] xl:w-[28.5vh] xl:h-[28.5vh] -mr-2 md:-mr-4 lg:-mr-6 -mt-4 md:-mt-2" />dify<span className="font-light">™</span>
         </h2>
       </div>
 
@@ -170,7 +161,7 @@ export default function Footer() {
               href="#"
               className="text-white text-[12px] text-center md:text-justify md:text-sm hover:text-gray-300 transition-colors"
             >
-              Bedrock Digital
+              Adify Digital
             </a>
           </nav>
         </div>
